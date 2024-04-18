@@ -24,7 +24,7 @@
 
 
 ## 📍 Overview
-made by @madsB @math474t @imkowalski
+made by @madsBA @math474t @imkowalski
 
 ---
 
