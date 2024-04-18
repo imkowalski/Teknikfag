@@ -22,27 +22,9 @@
 </p>
 <hr>
 
-## 🔗 Quick Links
-
-> - [📍 Overview](#-overview)
-> - [📦 Features](#-features)
-> - [📂 Repository Structure](#-repository-structure)
-> - [🧩 Modules](#-modules)
-> - [🚀 Getting Started](#-getting-started)
->   - [⚙️ Installation](#️-installation)
->   - [🤖 Running Teknikfag](#-running-Teknikfag)
->   - [🧪 Tests](#-tests)
-> - [🛠 Project Roadmap](#-project-roadmap)
-> - [🤝 Contributing](#-contributing)
-> - [📄 License](#-license)
-> - [👏 Acknowledgments](#-acknowledgments)
-
----
 
 ## 📍 Overview
-
-HTTP error 429 for prompt `overview`
-
+made by @madsB @math474t @imkowalski
 
 ---
 
@@ -52,7 +34,7 @@ HTTP error 429 for prompt `overview`
 
 Ensure you have the following dependencies installed on your system:
 
-* **Python**: `version x.y.z`
+* **Python**: `version 3.9`
 
 ### ⚙️ Installation
 
@@ -87,9 +69,6 @@ python main.py
 This project is protected under the [AGPL-3.0](https://github.com/imkowalski/Teknikfag/blob/main/LICENSE) License. 
 
 ---
-
-## 👏 Acknowledgments
-
 
 [**Return**](#-quick-links)
 
