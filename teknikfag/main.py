@@ -61,7 +61,7 @@ def loop():
     print(str(now.hour)+":"+str(now.minute),end="\r")
 
     picture_hour = [8,9,10,11,12,13,20,21,22,23,24,1]
-    if now.minute == 15 or now.minute == 45 and now.hour in picture_hour:
+    if (now.minute == 15 or now.minute == 45) and now.hour in picture_hour:
         camera.take_picture("img")
         print(">>Taken a picrute for the Website\n")
         sleep(60)
