@@ -1,158 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drivhus</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
 
-    <script>
-      function cam() {
-        let x = document.getElementById("livefeed");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drivhus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+
+  <script>
+    function cam() {
+      let x = document.getElementById("livefeed");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
       }
-    </script>
-  </head>
-  <style>
-    body {
-      background-color: rgb(10, 86, 17);
-      max-width: 1100px;
-      height: 100vh;
-      margin: 0 auto;
     }
-    .bento {
-      margin: 20px;
-      padding: 10px;
-      width: 100%;
-      border: 4px rgba(27, 106, 51) solid;
-      border-radius: 15px;
-      background-image: linear-gradient(90deg, #2c972b, #309b2e, #4ba75a);
-    }
-    .bento2 {
-      background-image: linear-gradient(90deg, #2b974b, #195d30);
-    }
-    .ceiling {
-      padding: 10px;
-      margin-top: 10vh;
-    }
-    .icon {
-      padding: 10px;
-    }
-    .text {
-      color: azure;
-      vertical-align: middle;
-      font-size: 6rem;
-    }
-    .text2 {
-      color: azure;
-      font-size: 2rem;
-    }
-    .content {
-      text-align: justify;
-   	  overflow-x: hidden;
-   	  word-wrap: break-word;
-   	  -webkit-hyphens: auto;
-   	    -moz-hyphens: auto;
-   	      -ms-hyphens: auto;
-   	        hyphens: auto;
-    }
-  </style>
-  <body>
-    <div class="row ceiling">
-      <div class="six columns">
-        <div class="row">
-          <div class="bento twelve columns a">
-            <div class="row">
-              <div class="columns three">
-                <img class="icon" src="static/Temp.svg" width="70vw" alt="" />
-              </div>
-              <div class="columns nine text">{{temp}} °C</div>
+  </script>
+</head>
+<style>
+  body {
+    background-color: rgb(10, 86, 17);
+    max-width: 1100px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .bento {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 4px rgba(27, 106, 51) solid;
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, #2c972b, #309b2e, #4ba75a);
+  }
+
+  .bento2 {
+    background-image: linear-gradient(90deg, #2b974b, #195d30);
+  }
+
+  .ceiling {
+    padding: 10px;
+    margin-top: 10vh;
+  }
+
+  .icon {
+    padding: 10px;
+  }
+
+  .text {
+    color: azure;
+    vertical-align: middle;
+    font-size: 6rem;
+  }
+
+  .text2 {
+    color: azure;
+    font-size: 2rem;
+  }
+
+  .content {
+    text-align: justify;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0bffb67e;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0bffb6fa;
+  }
+</style>
+
+<body>
+  <div class="row ceiling">
+    <div class="six columns">
+      <div class="row">
+        <div class="bento twelve columns a">
+          <div class="row">
+            <div class="columns three">
+              <img class="icon" src="static/Temp.svg" width="70vw" alt="" />
             </div>
-          </div>
-          <div class="bento twelve columns b">
-            <div class="row">
-              <div class="columns three">
-                <img class="icon" src="./static/Fugt.svg" width="70vw" alt="" />
-              </div>
-              <div class="columns nine text">{{hum}} %</div>
-            </div>
-          </div>
-          <div class="bento bento2 twelve columns b">
-            <div class="row">
-              <div class="columns three"></div>
-              <div class="columns nine text2">
-                <h2>Om projektet</h2>
-                <p class="content">
-                  Det automatiske drivhus har fokus på at dyrke planter uden
-                  selv at skulle have ansvaret for at vande, gøde og meget mere.
-                  Dette produkt automatiserer processen af at give planten
-                  ordentligt vand, lys og temperatur. Det kan variere sig fra
-                  plante til plante og i testen blev der plantet både hovedsalat
-                  og tomater som begge kunne gro derinde.
-                </p>
-              </div>
-            </div>
+            <div class="columns nine text">{{temp}} °C</div>
           </div>
         </div>
-      </div>
-      <div class="six columns">
-        <div class="row">
-          <div class="bento twelve columns c">
-            <div class="row">
-              <div class="columns three">
-                <img class="icon" src="./static/Tid.svg" width="70vw" alt="" />
-              </div>
-              <div class="columns nine text">{{time}} mins</div>
+        <div class="bento twelve columns b">
+          <div class="row">
+            <div class="columns three">
+              <img class="icon" src="./static/Fugt.svg" width="70vw" alt="" />
+            </div>
+            <div class="columns nine text">{{hum}} %</div>
+          </div>
+        </div>
+        <div class="bento bento2 twelve columns b">
+          <div class="row">
+            <div class="columns three"></div>
+            <div class="columns nine text2">
+              <h2>Om projektet</h2>
+              <p class="content">
+                Det automatiske drivhus har fokus på at dyrke planter uden
+                selv at skulle have ansvaret for at vande, gøde og meget mere.
+                Dette produkt automatiserer processen af at give planten
+                ordentligt vand, lys og temperatur. Det kan variere sig fra
+                plante til plante og i testen blev der plantet både hovedsalat
+                og tomater som begge kunne gro derinde.
+              </p>
             </div>
           </div>
-          <div onclick="cam()" class="bento twelve columns d">
-            <div class="row">
-              <div class="columns three">
-                <img
-                  class="icon"
-                  src="./static/Camera.svg"
-                  width="70vw"
-                  alt=""
-                />
-              </div>
-              <div class="columns nine text">Se billede</div>
-            </div>
-
-            <div id="livefeed" style="display: none">
-              <a href="https://drivhuscam.loophole.site/img"><img
-                src="https://drivhuscam.loophole.site/img"
-                width="100%"
-                style="border-radius: 5px"
-                alt=""
-              /></a>
-            </div>
-          </div>
-		<div class="bento bento2 twelve columns b">
-		          <div class="row">
-		            <div class="columns three"></div>
-		            <div class="columns nine text2">
-		              <h2>Om Hjemmesiden</h2>
-		              <p class="content">
-		                På Hjemmesiden kan man se information som temperaturen og luftfugtigheden i drivhuset, samt hvor langt
-		                tid der går inden næste vanding. Derudover tager hjemmesiden et billede af drivhuset hver halve time
-		                imens der er lys. Der er lys i drihuset i tidsperioderne: 08:00-14:00 og 20:00-02:00.
-		              </p>
-		            </div>
-		          </div>
-		        </div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="six columns">
+      <div class="row">
+        <div class="bento twelve columns c">
+          <div class="row">
+            <div class="columns three">
+              <img class="icon" src="./static/Tid.svg" width="70vw" alt="" />
+            </div>
+            <div class="columns nine text">{{time}} mins</div>
+          </div>
+        </div>
+        <div onclick="cam()" class="bento twelve columns d">
+          <div class="row">
+            <div class="columns three">
+              <img class="icon" src="./static/Camera.svg" width="70vw" alt="" />
+            </div>
+            <div class="columns nine text">Se billede</div>
+          </div>
+
+          <div id="livefeed" style="display: none">
+            <a href="https://drivhuscam.loophole.site/img"><img src="https://drivhuscam.loophole.site/img" width="100%"
+                style="border-radius: 5px" alt="" /></a>
+          </div>
+        </div>
+        <div class="bento bento2 twelve columns b">
+          <div class="row">
+            <div class="columns three"></div>
+            <div class="columns nine text2">
+              <h2>Om Hjemmesiden</h2>
+              <p class="content">
+                På Hjemmesiden kan man se information som temperaturen og luftfugtigheden i drivhuset, samt hvor langt
+                tid der går inden næste vanding. Derudover tager hjemmesiden et billede af drivhuset hver halve time
+                imens der er lys. Der er lys i drihuset i tidsperioderne: 08:00-14:00 og 20:00-02:00.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
